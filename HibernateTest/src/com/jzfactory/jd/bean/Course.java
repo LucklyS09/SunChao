@@ -20,6 +20,7 @@ import javax.persistence.Table;
 @Table(name = "course", catalog = "school_hibernate")
 public class Course implements java.io.Serializable {
 
+	
 	// Fields
 
 	private Integer id;
