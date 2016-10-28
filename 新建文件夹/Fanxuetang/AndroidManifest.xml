@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.c_chengji"
+    android:installLocation="auto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="20" />
+
+    <application
+        android:allowBackup="true"
+        android:allowClearUserData="false"
+        android:icon="@drawable/liuhua"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.ketang.MainActivity3"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" >
+        
+       
+        </activity>
+        <activity android:name=".qian" />
+        <activity android:name=".hou" />
+        <activity
+            android:name="com.example.is.MainActivity2"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.is.KaoshiActivity"
+            android:label="@string/title_activity_other" >
+        </activity>
+        <activity
+            android:name="com.example.is.ZuoyeActivity"
+            android:label="@string/title_activity_three" >
+        </activity>
+        <activity
+            android:name="com.example.is.KaoqinActivity"
+            android:label="@string/title_activity_kaoqin" >
+        </activity>
+        <activity
+            android:name="com.example.is.KetangActivity"
+            android:label="@string/title_activity_ketang" >
+        </activity>
+        <activity
+            android:name="com.example.is.CkechengActivity"
+            android:label="@string/title_activity_wkecheng" >
+        </activity>
+        <activity
+            android:name="com.example.is.FanhuiActivity"
+            android:label="@string/title_activity_fanhui" >
+        </activity>
+        <activity android:name="com.example.flash.FlashActivity" >
+           
+            
+            
+            
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            
+            
+            
+            
+        </activity>
+        <activity android:name="com.example.flash.LoginActivity" >
+        </activity>
+        <activity
+            android:name="com.example.kaoshi.KqActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.example.kaoshi.KsActivity" >
+        </activity>
+        <activity android:name="com.example.kaoshi.ZyActivity" >
+        </activity>
+        <activity android:name="com.example.kaoshi.KtActivity" >
+        </activity>
+        <activity
+            android:name="com.example.is.KechengbiaoActivity"
+            android:label="@string/title_activity_kechengbiao" >
+        </activity>
+        <activity android:name="com.example.kechengbiao.MainActivity" android:multiprocess="true"></activity>
+    </application>
+
+</manifest>

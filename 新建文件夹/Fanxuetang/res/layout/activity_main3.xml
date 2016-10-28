@@ -1,0 +1,174 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bj" >
+
+    <RelativeLayout android:id="@+id/title_bar" style="@style/main_title_bar_style">
+        <FrameLayout android:id="@+id/top_head_container" 
+            android:paddingLeft="10.0dip" 
+            android:paddingRight="10.0dip" 
+            android:layout_width="wrap_content"
+             android:layout_height="fill_parent">
+            <!--  android:background="@drawable/bg_head" -->
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/title_click_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:paddingLeft="13.0dip" >
+
+            <FrameLayout
+                android:id="@+id/title_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/title_recent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:text="学生端"
+                    android:textSize="25sp" />
+                
+            </FrameLayout>
+    <!--         <ImageView android:id="@+id/top_refresh" 
+                android:contentDescription="@string/app_name"
+                android:padding="3.0dip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_alignParentRight="true"
+		        android:background="@drawable/btn"
+		        android:text="今日"
+		        android:textSize="15dp"
+                android:layout_toRightOf="@id/title_parent" 
+                android:layout_centerVertical="true" /> -->
+
+            <Button
+                android:id="@+id/button1"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="false"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn"
+                android:text="今日"
+                android:textSize="15dp" />
+ 
+        </RelativeLayout>
+	</RelativeLayout>
+	
+    <RelativeLayout android:id="@+id/category_layout" 
+        android:background="@drawable/bg_category_bar" 
+        android:layout_width="fill_parent" 
+        android:layout_height="@dimen/top_category_height" 
+        android:layout_below="@id/title_bar" >
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/top_category_height"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true" >
+           
+			  <com.example.kechengbiao.CategoryTabStrip 
+                android:id="@+id/category_strip" 
+                android:paddingLeft="6.0dip" 
+                android:paddingRight="6.0dip" 
+                android:clipToPadding="false" 
+                android:layout_width="match_parent" 
+                android:layout_height="@dimen/top_category_height" />  
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+    <android.support.v4.view.ViewPager android:id="@+id/view_pager" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:layout_below="@id/category_layout" >
+
+    </android.support.v4.view.ViewPager>
+
+    
+    <LinearLayout
+        android:id="@+id/blow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                 >
+
+            <Button
+                android:id="@+id/ckecheng"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/butto" />
+
+                <ImageView
+                    android:id="@+id/imageView30"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    
+                    android:src="@drawable/kecheng" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="课程"
+                    android:textSize="17dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1">
+
+            <Button
+                android:id="@+id/cchengji"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/buttoo" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/kecheng" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:text="成绩"
+                    android:textSize="17dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery-3.0.0.min.js"></script>
+	<script src="highcharts.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		 Highcharts.setOptions({
+    colors: ['red','yellow','blue','green']});
+    $('#container').highcharts({
+        title: {
+            text: '温湿度',
+            x: -20 //center
+        },
+        subtitle: {
+            text: '一点都不准',
+            x: -20
+        },
+        xAxis: {
+            categories: ['1月', '2月', '2月', '4月', '5月', '6月',
+                '7月', '8月', '9月', '10月', '11月', '12月']
+        },
+        yAxis: {
+            title: {
+                text: '温度(°c)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '°C'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: 'New York',
+            data: [-0.2, 0.8, 5.7, 132.0, -117.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+        }, {
+            name: 'Berlin',
+            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+        }, {
+            name: '中国',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }, {
+            name: 'London',
+            data: [113.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }]
+    });
+});
+</script>
+
+</head>
+<body>
+<div id="container" style="width: 610px; height: 400px; float:left"></div>
+<div id="container1" style="width: 310px; height: 400px; max-width: 600px;float:left"></div>
+	<script type="text/javascript">
+	$(function () {
+    Highcharts.setOptions({
+    colors: ['#4A4A4A','#FFFF00','red','blue']});
+    $(document).ready(function () {
+
+        // Build the chart
+        $('#container1').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: '22222'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'q',
+                    y: 56.33
+                }, {
+                    name: 'w',
+                    y:1,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'e',
+                    y: 1
+                }, {
+                    name: 'r',
+                    y: 1
+                }, {
+                    name: 'd',
+                    y: 1
+                }, {
+                    name: 'f',
+                    y: 100
+                }]
+            }]
+        });
+    });
+});
+	</script>
+</body>
+</html>

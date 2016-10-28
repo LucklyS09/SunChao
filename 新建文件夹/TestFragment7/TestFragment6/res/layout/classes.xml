@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsjj"
+    android:orientation="vertical" >
+   
+      <!-- 我的课程表-->
+    
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bk"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/biaosjj" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="时间：8:00-9:40"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="17dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bk4"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/shusjj" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="课程：Android开发"
+                     android:textSize="17dp"
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bk4"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/zuobiaosjj" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="地点：教学楼1201"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bkxia"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/rensjj" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="班级：移动开发"
+                    android:textSize="17dp"
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bk"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/biaosjj" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    android:text="时间：10:00-11:40"
+                    
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bk4"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/shusjj" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="17dp"
+                     android:layout_marginLeft="20dp"
+                    android:text="课程：Android开发"
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bk4"
+                android:paddingLeft="20dp" >
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/zuobiaosjj" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="17dp"
+                     android:layout_marginLeft="20dp"
+                    android:text="地点：教学楼1201"
+                    android:textColor="@android:color/background_dark" />
+            </TableRow>
+            <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bkxia"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rensjj" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:textSize="17dp"
+               android:layout_marginLeft="20dp"
+                android:textColor="@android:color/background_dark"
+            android:text="班级：移动开发" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bk"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/biaosjj" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+              android:textColor="@android:color/background_dark"
+              android:textSize="17dp"
+            android:text="时间：1:00-2:40" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bk4"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shusjj" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="课程：Android开发" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bk4"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/zuobiaosjj" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="地点：教学楼1201" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bkxia"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img8"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rensjj" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="班级：移动开发" />
+
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bk"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/biaosjj" />
+
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:textSize="17dp"
+              android:textColor="@android:color/background_dark"
+            android:text="时间：3:00-4:40" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bk4"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img10"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shusjj" />
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="课程：Android开发" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bk4"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img11"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/zuobiaosjj" />
+
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="地点：教学楼1201" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bkxia"
+        android:paddingLeft="20dp" >
+
+        <ImageView
+            android:id="@+id/img12"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rensjj" />
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_gravity="center_vertical"
+              android:layout_marginLeft="20dp"
+              android:textSize="17dp"
+                android:textColor="@android:color/background_dark"
+            android:text="班级：移动开发" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp" >
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+    </TableRow>
+    
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="2016-08-08"
+        android:textSize="15sp" />
+
+</RelativeLayout>

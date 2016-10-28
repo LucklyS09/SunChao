@@ -1,0 +1,105 @@
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('tbody tr').click(function(e) {
+			e.preventDefault();
+
+			$('tbody tr').removeClass('success');
+			$(this).addClass('success');
+		});
+
+		$('#btn_cls_del').click(function(e) {
+		    var cname = $('a.active').text();
+			swal({
+				title : "删除班级",
+				text : "你确删除" + cname + "?",
+				type : "warning",
+				showCancelButton : true,
+				confirmButtonColor : "#DD6B55",
+				confirmButtonText : "确定!",
+				cancelButtonText : "取消",
+				closeOnConfirm : false
+			}, function() {
+				$('form#frm_cls').attr("action","ClasOptServlet?opt=del");
+				$('form#frm_cls').submit();
+			});
+		});
+
+		$('#btn_std_del').click(function(e) {
+			var name = $('tr.success').children("#name").text();
+			var id = $('tr.success').children("#id").text();
+			swal({
+				title : "删除学生",
+				text : "你确删除" + name + "?",
+				type : "warning",
+				showCancelButton : true,
+				confirmButtonColor : "#DD6B55",
+				confirmButtonText : "确定!",
+				cancelButtonText : "取消",
+				closeOnConfirm : false
+			}, function() {
+				$('input#studId').val(id);
+				var action = $('form#frm_std').attr("action");
+				$('form#frm_std').attr("action", action + "?opt=del");
+				$('form#frm_std').submit();
+
+			});
+		});
+
+		$('#btn_cls_add').click(function(e) {
+			$('input#cname').val("");
+			$('input#ct_name').val("");
+			/*    var action=$('form#frm_std').attr("action"); */
+			$('form#frm_cls').attr("action", "ClasOptServlet?opt=add");
+		});
+		
+		$('#btn_std_add').click(function(e) {
+			$('input#studId').val("");
+			$('input#sname').val("");
+			$('input#scode').val("");
+			$('input#ssex_m').removeAttr("checked");
+			$('input#ssex_w').removeAttr("checked");
+			$('input#ssex_m').attr("checked");
+			$('input#ssex_m').click();
+			$('input#sbirth').val("");
+			/*    var action=$('form#frm_std').attr("action"); */
+			$('form#frm_std').attr("action", "StudOptServlet?opt=add");
+		});
+
+		$('#btn_std_edit').click(function(e) {
+
+			var code = $('tr.success').children("#code").text();
+			var name = $('tr.success').children("#name").text();
+			var sex = $('tr.success').children("#sex").text();
+			var birth = $('tr.success').children("#birth").text();
+			var id = $('tr.success').children("#id").text();
+			$('input#sname').val(name);
+			$('input#scode').val(code);
+			$('input#ssex_m').removeAttr("checked");
+			$('input#ssex_w').removeAttr("checked");
+			if (sex == '男') {
+
+				$('input#ssex_m').attr("checked", "checked");
+				$('input#ssex_m').click();
+
+			} else {
+				$('input#ssex_w').attr("checked", "checked");
+				$('input#ssex_w').click();
+			}
+			$('input#sbirth').val(birth);
+			$('input#studId').val(id);
+			var action = $('form#frm_std').attr("action");
+			$('form#frm_std').attr("action", action + "?opt=edit");
+		});
+		
+		$('#btn_cls_edit').click(function(e) {
+
+			var cname = $('a.active').text();
+			var ct_name = $('strong#t_name').text();
+			$('input#cname').val(cname);
+			$('input#ct_name').val(ct_name);
+			var action = $('form#frm_cls').attr("action");
+			$('form#frm_cls').attr("action",action + "?opt=edit");
+		});
+
+	});
+</script>

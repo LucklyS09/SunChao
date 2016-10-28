@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        ===
+        This comment should NOT be removed.
+
+        Charisma v2.0.0
+
+        Copyright 2012-2014 Muhammad Usman
+        Licensed under the Apache License v2.0
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        http://usman.it
+        http://twitter.com/halalit_usman
+        ===
+    -->
+    <meta charset="utf-8">
+    <title>翻学堂</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/hover-effects.css">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+    <!-- topbar starts -->
+     <div style="height:70px;" class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+         
+           <img style="margin-left:20px;" src="img/1592.png" />
+
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs">教师</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">修改密码</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html">注销</a></li>
+                </ul>
+            </div>
+            <!-- user dropdown ends -->
+
+            <!-- theme selector starts -->
+            <div class="btn-group pull-right theme-container animated tada">
+              
+            </div>
+            <!-- theme selector ends -->
+ 
+
+           
+
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">教师</li>
+                        <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> 首页</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="个人信息.html"><i class="glyphicon glyphicon-eye-open"></i><span> 个人信息</span></a>
+                        </li>
+                         <li class="accordion">
+                            <a class="ajax-link" ><i class="glyphicon glyphicon-edit"></i><span> 课程信息</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a class="ajax-link" href="课程表.html"><i ></i><span> 授课表</span></a>
+                        </li>
+                                <li><a href="教案.html ">教案</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-th"></i><span> 授课班级信息</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="班级信息.html ">班级信息</a></li>
+                                <li><a href="成绩.html ">成绩</a></li>
+                                <li><a href="考勤.html ">考勤</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="ajax-link" href="评价.html"><i class="glyphicon glyphicon-star"></i><span> 学生评价</span></a>
+                        </li>
+                        </ul>
+                       </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+        
+      
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+    <ul class="breadcrumb" style="height:35px">
+        <li>
+           <a href="index.html ">首页</a>
+        </li>
+        <li>
+            <a href="成绩.html">成绩</a>
+        </li>
+    </ul>
+   
+               <div class="control-group" style="float:left;width:300px;margin-top:15px;">
+                           <label class="control-label" for="selectError" style="float:left"><h4 style="margin-top:-0.9px;margin-left:30px">选择院系:</h4></label>
+                                    <div class="controls" style="margin-top:-5px">
+                                        <select id="selectError" data-rel="chosen" style="width:150px;height:200px">
+                                            <option>信息技术学院</option>
+                                            <option>信息技术学院</option>
+                                            <option>信息xxxxxxx</option>
+                                        </select>
+                               </div>
+                    </div> 
+                  
+
+                    <div class="control-group" style="float:left;width:300px;margin-top:15px;">
+                           <label class="control-label" for="selectError" style="float:left"><h4 style="margin-top:-0.9px;">选择专业:</h4></label>
+                                    <div class="controls" style="margin-top:-5px">
+                                        <select id="selectError" data-rel="chosen" style="width:150px;height:200px">
+                                            <option>信息</option>
+                                            <option>信息</option>
+                                        </select>
+                               </div>
+                    </div> 
+                  <div class="control-group" style="float:left;width:300px;margin-top:15px;">
+                           <label class="control-label" for="selectError" style="float:left"><h4 style="margin-top:-0.9px;">选择班级:</h4></label>
+                                    <div class="controls" style="margin-top:-5px">
+                                        <select id="selectError" data-rel="chosen" style="width:150px;height:200px">
+                                            <option>信息</option>
+                                            <option>信息</option>
+                                        </select>
+                               </div>
+                    </div> 
+
+                    <label style="width:100px ;margin-left:50px;margin-top:1px" ng-click="saveweek()" class="btn btn-primary">查询</label>
+</div>
+
+ <div class="row">
+    <div class="box col-md-12">
+    <div class="box-inner" style="height:400px;">
+    <div class="box-header well" data-original-title="">
+        <h2><i class="glyphicon glyphicon-user"></i> 成绩</h2>
+
+        <div class="box-icon">
+           
+         
+                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                            class="glyphicon glyphicon-chevron-up"></i></a>
+        </div>
+    </div>
+    <div class="box-content" >
+    <h2></h2>
+        <ul>
+            <li>
+                <div  class="port-8 effect-1">
+                    <div class="image-box">
+                        <img src="img/img-2.jpg"  style="width:360px;height:220px;" alt="Image-1" >
+                    </div>
+                    <div class="text-desc";>
+                        <h3 >课堂表现</h3>
+                        
+                        <a href="课堂表现.html " class="btnn">点击</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="port-8 effect-2">
+                    <div class="image-box">
+                        <img src="img/img-1.jpg" style="width:320px;height:220px;" alt="Image-2">
+                    </div>
+                    <div class="text-desc">
+                        <h3>考试成绩</h3>
+                        
+                        <a href="考试成绩.html " class="btnn">点击</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="port-8 effect-3">
+                    <div class="image-box">
+                        <img src="img/img-3.jpg"  style="width:320px;height:220px;" alt="Image-3">
+                    </div>
+                    <div class="text-desc">
+                        <h3>作业成绩</h3>
+                        
+                        <a href="作业成绩.html" class="btnn">点击</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+   
+    </div>
+   
+    <!--/span-->
+
+    </div><!--/row-->
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+
+
+</body>
+</html>
+

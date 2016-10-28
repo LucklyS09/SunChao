@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:bottom="5px"
+        android:left="5px"
+        android:right="5px"
+        android:top="5px">
+        <shape>
+            <gradient
+                android:angle="90"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#999999"
+                android:startColor="#CCCCCC"
+                android:type="linear" />
+
+            <corners
+                android:bottomLeftRadius="10dip"
+                android:bottomRightRadius="10dip"
+                android:topLeftRadius="10dip"
+                android:topRightRadius="10dip" />
+        </shape>
+
+        <solid android:color="#00CACA" />
+        <!-- 设置按钮的四个角为弧形 -->
+        <!-- android:radius 弧形的半径 -->
+        <corners android:radius="35dip" />
+
+        <!-- padding：Button里面的文字与Button边界的间隔 -->
+        <padding
+            android:bottom="20dp"
+            android:left="20dp"
+            android:right="20dp"
+            android:top="20dp" />
+    </item>
+
+</layer-list>

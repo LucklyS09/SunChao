@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>自适应</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Description" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<style>
+		#nav{
+			width:100%
+			height:100px;
+		}
+		#nav a{
+			text-align:center;
+				display:block;
+				width:20%;
+				height:100%;
+				color:red;
+				float:left;
+				background:green;
+				font: normal 100% Georgia,serif;
+		}
+		#div1,#div2{
+				width:48%;
+				height:75px;
+				background:red;
+				float:left;
+				margin-right:2%
+			}
+			#div3,#div4{
+				width:48%;
+				height:75px;
+				background:yellow;
+				float:left;
+				margin-right:2%
+			}
+			#div5,#div6{
+				width:48%;
+				height:75px;
+				background:blue;
+				float:left;
+				margin-right:2%
+			}#div7,#div8{
+				width:48%;
+				height:75px;
+				background:pink;
+				float:left;
+				margin-right:2%
+			}
+		@media screen and (max-width:480px) {
+			body{text-align:center;}
+			#nav{
+				width:100%
+				height:300px;
+			}
+			#nav a{
+				text-align:center;
+				display:block;
+				width:100%;
+				height:200%;
+				color:red;
+				float:left;
+				background:green;
+				font: normal 400% Georgia,serif;
+			}
+			#div1,#div3,#div5,#div7{
+				width:100%;
+				height:50px;
+				background:red;
+				float:left;
+			}
+			#div2,#div4,#div6,#div8{
+				width:100%;
+				height:50px;
+				background:blue;
+				float:left;
+			}
+		}
+		@media screen and (min-width:960px) {
+			body{text-align:center;}
+			#nav{
+				width:100%
+				height:50px;
+			}
+			#nav a{
+				text-align:center;
+				display:block;
+				width:20%;
+				height:100%;
+				color:red;
+				float:left;
+				background:green;
+				font: normal 100% Georgia,serif;
+			}
+			#div1,#div2,#div3,#div4{
+				width:23%;
+				height:150px;
+				background:red;
+				float:left;
+				margin-right:2%
+			}
+			#div5,#div6,#div7,#div8{
+				width:23%;
+				height:150px;
+				background:blue;
+				float:left;
+				margin-right:2%
+			}
+		}
+	</style>
+</head>
+<body>
+<div id="nav">
+	<a>首页</a>	
+	<a>新闻动态</a>
+	<a>产品介绍</a>
+	<a>新品发布</a>
+	<a>关于我们</a>
+</div>
+<div id="div1">div1</div>
+<div id="div2">div2</div>
+<div id="div3">div3</div>
+<div id="div4">div4</div>
+<div id="div5">div5</div>
+<div id="div6">div6</div>
+<div id="div7">div7</div>
+<div id="div8">div8</div>
+</body>
+
+</html>

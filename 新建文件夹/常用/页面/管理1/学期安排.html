@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        ===
+        This comment should NOT be removed.
+
+        Charisma v2.0.0
+
+        Copyright 2012-2014 Muhammad Usman
+        Licensed under the Apache License v2.0
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        http://usman.it
+        http://twitter.com/halalit_usman
+        ===
+    -->
+    <meta charset="utf-8">
+    <title>翻学堂/成绩</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/hover-effects.css">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+
+<body>
+    <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
+                <span>翻学堂</span></a>
+
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs">xxx</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">切换账号</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html">退出</a></li>
+                </ul>
+            </div>
+            <!-- user dropdown ends -->
+
+            <!-- theme selector starts -->
+            <div class="btn-group pull-right theme-container animated tada">
+              
+              
+            </div>
+            <!-- theme selector ends -->
+ 
+
+          
+                </li>
+                
+
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">管理</li>
+                        <li><a class="ajax-link" href="主页.html"><i class="glyphicon glyphicon-home"></i><span>首页</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="学院信息.html"><i class="glyphicon glyphicon-eye-open"></i><span> 学院信息</span></a>
+                        </li>
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> 用户管理</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="教师管理.html">教师管理</a></li>
+                                <li><a href="学生管理.html">学生管理</a></li>
+                            </ul>
+                        </li>
+                         <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> 课程设置</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="学期安排.html">学期安排</a></li>
+                                <li><a href="排课.html">排课</a></li>
+                                <li><a href="课程查看.html">课程查看</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="ajax-link" href="成绩查询.html"><i class="glyphicon glyphicon-list-alt"></i><span>成绩查询</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="统计.html"><i class="glyphicon glyphicon-font"></i><span> 统计
+                        </li>
+                       </ul>
+                       </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+        
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+    <ul class="breadcrumb" style="height:35px">
+        <li>
+            <a href="#">首页</a>
+        </li>
+        <li>
+            <a href="#">学期安排</a>
+        </li>
+    </ul>
+</div>
+
+ <div class="row" >
+    <div class="box col-md-12">
+    <div class="box-inner" style="height:200px;">
+    <div class="box-header well" data-original-title="">
+        <h2><i class="glyphicon glyphicon-user"></i> 学期安排</h2>
+       
+   
+       </div>
+
+                <div class="row">
+                    <div class="control-group" style="float:left;width:300px;margin-top:25px;">
+                           <label class="control-label" for="selectError" style="float:left"><h3 style="margin-top:-0.9px;margin-left:30px">学年:</h3></label>
+                                    <div class="controls" style="margin-top:-5px">
+                                        <select id="selectError" data-rel="chosen" style="width:150px;height:200px">
+                                            <option>2016</option>
+                                            <option>2015</option>
+                                        </select>
+                               </div>
+                    </div> 
+
+                  
+
+                    <div class="control-group" style="float:left;width:300px;margin-top:25px;">
+                           <label class="control-label" for="selectError" style="float:left"><h3 style="margin-top:-0.9px;">学期:</h3></label>
+                                    <div class="controls" style="margin-top:-5px;">
+                                        <select id="selectError" data-rel="chosen" style="width:150px;height:200px;">
+                                            <option>第一学期</option>
+                                            <option>第二学期</option>
+                                        </select>
+                               </div>
+                    </div> 
+                    </div> 
+
+                     <form style="margin-top:20px ;">
+                       <h3 style="float: left;margin-left:20px;">起始日期:</h3>
+                       <input  type="text" name="fname" style="float:left;
+                      height: 35px;margin-top:10px" >
+                       <h3 style="float:left;margin-left:20px;">至</h3>
+                       <input  type="text" name="lname" style="float: left;
+                       height: 35px;margin-top:10px">
+
+    
+                    <label style="width:100px ;margin-top:10px;margin-left:50px" ng-click="saveweek()" class="btn btn-primary">保存</label>
+                      </form>
+       </div></div>
+     <div class="row" >
+    <div class="box col-md-12">
+    <div class="box-inner" style="height:300px;margin-left:15px;margin-right: 15px;">
+    <div class="box-header well" data-original-title="">
+        <h2><i class="glyphicon glyphicon-user"></i> 历史学期</h2>
+       
+        <table style="margin-top:50px;" id="users" aria-describedby="users_info" class="table table-striped table-bordered dataTable"><thead><tr role="row"><th role="columnheader" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending" style="width: 100px;" class="sorting_asc">序号</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting">学期</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting"> 开始日期</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting"> 结束日期</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 100px;" class="sorting"> 周数</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting"></th></tr></thead><tbody role="alert" aria-live="polite" aria-relevant="all"><!-- ngRepeat: record in records.data --><tr ng-repeat="record in records.data" class="odd ng-scope"><td class="sorting_1 ng-binding">1</td><td class="ng-binding">2015~2016学年,第二学期</td><td class="ng-binding">2016-03-07</td><td class="ng-binding">2016-06-19</td><td class="ng-binding">15</td><td><div class="btn-group"> <a class="btn btn-danger" href="#">
+                <i class="glyphicon glyphicon-trash icon-white"></i>
+                删除
+            </a></li></ul></div></td></tr><!-- end ngRepeat: record in records.data --><tr ng-repeat="record in records.data" class="odd ng-scope"><td class="sorting_1 ng-binding">2</td><td class="ng-binding">2015~2016学年,第一学期</td><td class="ng-binding">2016-07-30</td><td class="ng-binding">2016-07-30</td><td class="ng-binding">2</td><td><div class="btn-group"> <a class="btn btn-danger" href="#">
+                <i class="glyphicon glyphicon-trash icon-white"></i>
+                删除
+            </a></li></ul></div></td></tr><!-- end ngRepeat: record in records.data --></tbody></table>
+        </div></div>
+    </div><!--/row-->
+     <div class="row" >
+    <div class="box col-md-12">
+    <div class="box-inner" style="height:300px;margin-left:30px;margin-right: 30px;">
+    <div class="box-header well" data-original-title="">
+        <h2><i class="glyphicon glyphicon-user"></i>上课时间设置</h2>
+       
+        <table style="margin-top:50px;" id="users" aria-describedby="users_info" class="table table-striped table-bordered dataTable"><thead><tr role="row"><th role="columnheader" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending" style="width: 100px;" class="sorting_asc">序号</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting">课程时段</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting">上课时间</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting">下课时间</th><th role="columnheader" tabindex="0" rowspan="1" colspan="1" style="width: 200px;" class="sorting"></th></tr></thead><tbody role="alert" aria-live="polite" aria-relevant="all"><!-- ngRepeat: record in records.data --><tr ng-repeat="record in records.data" class="odd ng-scope"><td class="sorting_1 ng-binding">1</td><td class="ng-binding">第1.2节</td><td class="ng-binding">08:00</td><td class="ng-binding">09:40</td><td><div class="btn-group"> <a class="btn btn-info" href="#">
+                <i class="glyphicon glyphicon-edit icon-white"></i>
+                修改
+            </a>
+            <a class="btn btn-danger" href="#">
+                <i class="glyphicon glyphicon-trash icon-white"></i>
+                删除
+            </a></li></ul></div></td></tr><!-- end ngRepeat: record in records.data --><tr ng-repeat="record in records.data" class="odd ng-scope"><td class="sorting_1 ng-binding">2</td><td class="ng-binding">第1.2节</td><td class="ng-binding">08:00</td><td class="ng-binding">09:40</td><td><div class="btn-group"> <a class="btn btn-info" href="#">
+                <i class="glyphicon glyphicon-edit icon-white"></i>
+                修改
+            </a>
+            <a class="btn btn-danger" href="#">
+                <i class="glyphicon glyphicon-trash icon-white"></i>
+                删除
+            </a></li></ul></div></td></tr><!-- end ngRepeat: record in records.data --></tbody></table><a href="#">添加时段</a>
+        </div></div>
+    </div><!--/row-->
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+
+
+</body>
+</html>
+

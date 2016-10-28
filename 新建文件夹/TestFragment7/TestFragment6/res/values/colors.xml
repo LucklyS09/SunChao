@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="activity_bg_color">#fffafafa</color>
+    <color name="top_category_bar_background">#ffeeeeee</color>
+    <color name="divider">#ffdddddd</color>
+    
+    <color name="category_tab_text">#ff707070</color>
+    <color name="category_tab_text_dark">#fffafafa</color>
+    <color name="category_tab_highlight_text">#fffafafa</color>
+    <color name="category_tab_highlight_text_dark">#ffd43d3d</color>
+    <color name="category_tab_highlight_bg">#ffd43d3d</color>
+    <color name="category_tab_highlight_dark_bg">#fffafafa</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    
+     
+    <color name="black">#ff000000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="gray">#ff888888</color>
+    <color name="ltgray">#ffcccccc</color>
+  
+    <color name="blue">#ff0022ff</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="magenta">#ffff00ff</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange">#ffffac22</color>
+    <color name="transparent_background">#90000000</color>
+    <color name="ivory">#FFFFF0</color><!--象牙色 --> 
+    <color name="tan">#D2B48C</color><!--茶色 -->    
+</resources>

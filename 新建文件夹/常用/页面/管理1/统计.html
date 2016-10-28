@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        ===
+        This comment should NOT be removed.
+
+        Charisma v2.0.0
+
+        Copyright 2012-2014 Muhammad Usman
+        Licensed under the Apache License v2.0
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        http://usman.it
+        http://twitter.com/halalit_usman
+        ===
+    -->
+    <meta charset="utf-8">
+    <title>统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+     <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+<script type="text/javascript">
+    $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: '移动开发考试平均分'
+        },
+       
+        xAxis: {
+            categories: ['第一次考试', '第二次考试', '第三次考试', '第四次考试', '第五次考试','第六次考试']
+        },
+        yAxis: {
+            title: {
+                text: '分数'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: '移动一班',
+            data: [79.3, 76.0, 87.3, 88.6, 89.0, 86.6]
+        }, {
+            name: '移动二班',
+            data: [76, 87, 97, 67, 87, 96]
+        }, {
+            name: '移动三班',
+            data: [76, 86, 87, 98, 89, 89]
+        }, {
+            name: '移动四班',
+            data: [98, 88, 78, 98, 78, 88]
+        }, {
+            name: '移动五班',
+            data: [74, 84, 83, 89, 82, 95]
+        }]
+    });
+});
+</script>
+
+<script type="text/javascript">
+    $(function () {
+    $('#containe').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '移动开发出勤情况'
+        },
+        xAxis: {
+            categories: [
+                '移动一班',
+                '移动二班',
+                '移动三班',
+                '移动四班',
+                '移动五班'
+            ],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '人数(位)'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:f} 位</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '迟到，早退',
+            data: [2, 4, 1,2, 3]
+
+        }, {
+            name: '旷课',
+            data: [0, 3, 1, 1, 1]
+
+        }, {
+            name: '请假',
+            data: [3, 2, 4, 1, 1]
+
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+    $('#container1').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '移动一班'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '60分以下',
+                y: 3
+            }, {
+                name: '69~70',
+                y: 10
+            }, {
+                name: '79~80',
+                y: 20
+            }, {
+                name: '89~90',
+                y: 6
+            }, {
+                name: '90以上',
+                y: 7
+            }]
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+    $('#container2').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '移动二班'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '60分以下',
+                y: 3
+            }, {
+                name: '69~70',
+                y: 10
+            }, {
+                name: '79~80',
+                y: 20
+            }, {
+                name: '89~90',
+                y: 6
+            }, {
+                name: '90以上',
+                y: 7
+            }]
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+    $('#container3').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '移动三班'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '60分以下',
+                y: 3
+            }, {
+                name: '69~70',
+                y: 10
+            }, {
+                name: '79~80',
+                y: 20
+            }, {
+                name: '89~90',
+                y: 6
+            }, {
+                name: '90以上',
+                y: 7
+            }]
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+    $('#container4').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '移动四班'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '60分以下',
+                y: 3
+            }, {
+                name: '69~70',
+                y: 10
+            }, {
+                name: '79~80',
+                y: 20
+            }, {
+                name: '89~90',
+                y: 6
+            }, {
+                name: '90以上',
+                y: 7
+            }]
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+    $(function () {
+    $('#container5').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: '移动五班'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: '60分以下',
+                y: 3
+            }, {
+                name: '69~70',
+                y: 10
+            }, {
+                name: '79~80',
+                y: 20
+            }, {
+                name: '89~90',
+                y: 6
+            }, {
+                name: '90以上',
+                y: 7
+            }]
+        }]
+    });
+});
+</script>
+<body>
+    <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=""> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
+                <span>翻学堂</span></a>
+
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right">
+                <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs"> admin</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li class="divider"></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+            <!-- user dropdown ends -->
+
+            <!-- theme selector starts -->
+            <div class="btn-group pull-right theme-container animated tada">
+               
+            </div>
+            <!-- theme selector ends -->
+
+        </div>
+    </div>
+    <!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+        
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                     <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">管理</li>
+                        <li><a class="ajax-link" href="主页.html"><i class="glyphicon glyphicon-home"></i><span>首页</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="学院信息.html"><i class="glyphicon glyphicon-eye-open"></i><span> 学院信息</span></a>
+                        </li>
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> 用户管理</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="学生管理.html">教师管理</a></li>
+                                <li><a href="教师管理.html">学生管理</a></li>
+                            </ul>
+                        </li>
+                         <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> 课程设置</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="学期安排.html">学期安排</a></li>
+                                <li><a href="排课.html">排课</a></li>
+                                <li><a href="课程设置.html">课程查看</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="ajax-link" href="成绩查询.html"><i class="glyphicon glyphicon-list-alt"></i><span>成绩查询</span></a>
+                        </li>
+                        <li><a class="ajax-link" href="统计.html"><i class="glyphicon glyphicon-font"></i><span> 统计
+                        </li>
+                       </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+        
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+    <ul class="breadcrumb">
+        <li>
+            <a href="#">统计</a>
+        </li>
+    </ul>
+</div>
+<div><table>
+<tr>
+<td>
+    <h3 style="font-size:20px; margin-top:; margin-left:80px">学院：</h3>
+    </td>
+    <td>
+    <select style=" margin-top:;width:200px;height:30px;">
+  <option value="volvo"><b>电子信息学院</b></option>
+  <option value="saab">会计电算化学院</option>
+  <option value="opel">网络技术学院</option>
+</select>
+</td>
+
+<td>
+    <h3 style="font-size:20px; margin-top:; margin-left:80px">班级：</h3>
+</td>
+
+<td>
+    <select style=" margin-top:;width:200px;height:30px;">
+  <option value="volvo">移动开发</option>
+  <option value="saab">会计电算化学院</option>
+  <option value="opel">网络技术学院</option>
+</select>
+</td>
+<td>
+      <label style="width:100px ;margin-left:50px" ng-click="saveweek()" class="btn btn-primary">查询</label></td>
+</tr>
+</table></div>
+<div class="row">
+
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well">
+                <h2><i class="glyphicon glyphicon-list-alt"></i> 平均分</h2>
+                 <div class="box-icon">
+                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                            class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a href="#" class="btn btn-close btn-round btn-default"><i
+                            class="glyphicon glyphicon-remove"></i></a>
+                </div>
+                </div>
+               <div class="box-content">
+               <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+               </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well">
+                <h2><i class="glyphicon glyphicon-list-alt"></i> 出勤情况</h2>
+
+                <div class="box-icon">
+                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                            class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a href="#" class="btn btn-close btn-round btn-default"><i
+                            class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content">
+          <div id="containe" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-list-alt"></i>及格率</h2>
+
+                <div class="box-icon">
+                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                            class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a href="#" class="btn btn-close btn-round btn-default"><i
+                            class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </div>
+            <div class="box-content" style="width:1000px;height:1500px;">
+                <div style="margin:0 auto; width:800px;">
+             <div id="container1" style="width: 400px; height: 400px;  margin: 0 auto; float:left;"></div>
+              <div id="container2" style="width: 400px; height: 400px;  margin: 0 auto; float:left;"></div></div>
+              <div style="margin:0 auto; width:800px;">
+               <div id="container3" style="width: 400px; height: 400px; margin: 0 auto; float:left;"></div>
+                <div id="container4" style="width: 400px; height: 400px;  margin: 0 auto; float:left;"></div></div>
+                <div style="margin:0 auto; width:800px;">
+                <div id="container5" style="width: 400px; height: 400px;  margin: 0 auto; float:left;"></div></div>
+            </div>
+        </div>
+    </div>
+
+<!-- chart libraries start -->
+<script src="bower_components/flot/excanvas.min.js"></script>
+<script src="bower_components/flot/jquery.flot.js"></script>
+<script src="bower_components/flot/jquery.flot.pie.js"></script>
+<script src="bower_components/flot/jquery.flot.stack.js"></script>
+<script src="bower_components/flot/jquery.flot.resize.js"></script>
+<!-- chart libraries end -->
+<script src="js/init-chart.js"></script>
+
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+
+    <!-- Ad, you can remove it -->
+    <div class="row">
+        <div class="col-md-9 col-lg-9 col-xs-9 hidden-xs">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- Charisma Demo 2 -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-5108790028230107"
+                 data-ad-slot="3193373905"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <div class="col-md-2 col-lg-3 col-sm-12 col-xs-12 email-subscription-footer">
+            <div class="mc_embed_signup">
+                
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+
+    </div>
+    <!-- Ad ends -->
+
+    <hr>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here settings can be configured...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+        <p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy; <a href="http://usman.it" target="_blank">Muhammad
+                Usman</a> 2012 - 2015</p>
+
+        <p class="col-md-3 col-sm-3 col-xs-12 powered-by">Powered by: <a
+                href="http://usman.it/free-responsive-admin-template">Charisma</a></p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="js/jquery.cookie.js"></script>
+<!-- calender plugin -->
+<script src='bower_components/moment/min/moment.min.js'></script>
+<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<!-- data table plugin -->
+<script src='js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="js/charisma.js"></script>
+
+
+</body>
+</html>

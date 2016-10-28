@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="aww">#00000000</drawable>
+    <drawable name="bww">#55000000</drawable>
+    
+    <string name="category_1">星期一</string>
+    <string name="category_2">星期二</string>
+    <string name="category_3">星期三</string>
+    <string name="category_4">星期四</string>
+    <string name="category_5">星期五</string>
+    <string name="category_6">星期六</string>
+    <string name="category_7">星期七</string>
+
+    <string name="app_name">翻学堂学生端</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="category_qiandao">签到签退</string>
+    <string name="category_wenti">问题抢答</string>
+    <string name="category_jiaoshi">教师评价</string>
+    <string name="category_paihangbang">排行榜</string>
+    <string name="category_wodechengji">我的成绩</string>
+    <string name="title_activity_other">OtherActivity</string>
+    <string name="title_activity_three">ThreeActivity</string>
+    <string name="title_activity_kaoqin">KaoqinActivity</string>
+    <string name="title_activity_ketang">KetangActivity</string>
+    <string name="title_activity_wkecheng">WkechengActivity</string>
+    <string name="title_activity_fanhui">FanhuiActivity</string>
+    <string name="title_activity_kechengbiao">KechengbiaoActivity</string>
+
+</resources>
